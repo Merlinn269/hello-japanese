@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink_pastel"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/text_view_selected_alphabet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:letterSpacing="@dimen/material_emphasis_disabled_background"
+            android:text="@string/alphabet_hiragana"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/brown"
+            android:textSize="@dimen/title_size" />
+
+        <GridView
+            android:id="@+id/grid_view_alphabets"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/text_view_selected_alphabet"
+            android:gravity="center"
+            android:horizontalSpacing="@dimen/spacing"
+            android:numColumns="5"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="@dimen/spacing" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="bottom|end"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/btn_hiragana"
+                android:checked="true"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="match_parent"
+                android:background="@drawable/radio_selector"
+                android:button="@drawable/null_radio_button"
+                android:elevation="@dimen/elevation"
+                android:gravity="center"
+                android:text="@string/alphabet_hiragana" />
+
+            <RadioButton
+                android:id="@+id/btn_katakana"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="match_parent"
+                android:background="@drawable/radio_selector"
+                android:button="@drawable/null_radio_button"
+                android:elevation="@dimen/elevation"
+                android:gravity="center"
+                android:text="@string/alphabet_katakana" />
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
